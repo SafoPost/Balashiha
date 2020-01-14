@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Балашиха Хлеб</title>
 </head>
 <body>
-  <div class="header">
-    <div class="container">
+  <header class="header">
+    <div class="menu">
       <div class="brand">
-        <a href="#" class="brand__logo">
-          <img src="img/logo.svg" alt="Logo" class="brand__logo__image">
-        </a>
+        <a href="#" class="brand__logo"></a>
+        <!-- <object type="image/svg+xml" data="img/logo.svg" class="brand__logo__image"></object> -->
+        <!-- <img src="img/logo.svg" alt="Logo" class="brand__logo__image"> -->
+        <div class="brand__logo__image"></div>
         <a href="#" class="brand__title">
           <strong class="brand__title--primary">Балашиха Хлеб</strong>
           <p class="brand__title--secondary">хлебобулочные и кондитерские изделия</p>
@@ -21,48 +24,77 @@
       </div>
       <div class="contacts">
         <a href="84957771100" class="contacts__phone">8(495)<span class="contacts__phone--primary">777-11-00</span></a>
-        <button class="contacts__button">Перезвоните мне!</button>
+        <div class="contacts__block">
+          <div class="contacts__call"></div>
+          <div class="contacts__arrow"></div>
+          <button class="contacts__button">Перезвоните мне!</button>
+        </div>
+        
       </div>
     </div>
-    <!-- /.container -->
-  </div>
+    <!-- /.menu -->
+  </header>
   <!-- /.header -->
-  <div class="main">
-    <div class="hero">
-      <div class="container"></div>
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__background">
+          <img src="img/bg-hero.jpg" alt="Хлеб" class="hero__background--primary">
+          <img src="img/bg-hero-2.jpg" alt="Пшеница" class="hero__background--secondary">
+        </div>
+        <h1 class="hero__title"><strong class="hero__title--primary">Уникальные коммерческие условия</strong><br>по поставкам хлебобулочных и кандитерских изделей от крупнейшего хлебзавода в МО</h1>
+        <div class="hero__content">
+          <div class="row hero__row">
+            <div class="col hero__col">60 тонн<br>хлебобулочных<br>изделий в день</div>
+            <div class="col hero__col">Старейший<br>хлебзавод в<br>Москве</div>
+            <div class="col hero__col">Уникальная<br>система тройного<br>контроля</div>
+          </div>
+          <div class="hero__wrap">
+            <h3 class="hero__wrap__title"> <span class="hero__wrap__title--primary">Получите персональное</span><br>коммерческое предложение</h3>
+            <div class="form hero__form">
+              <input type="text" class="form__input form__input--name hero__form__input" placeholder="Ваше имя">
+              <input type="email" class="form__input form__input--email hero__form__input" placeholder="Ваш e-mail">
+              <input type="tel" class="form__input form__input--tel hero__form__input" placeholder="Ваш номер телефона">
+              <button class="form__button">Получить КП!</button>
+              <p class="form__text">Ваши данные не будут переданны
+                третьим лицам, согласно законам РФ</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- /.container -->
-    </div>
+    </section>
     <!-- /.hero -->
-    <div class="photo">
+    <section class="photo">
       <div class="container"></div>
       <!-- /.container -->
-    </div>
+    </section>
     <!-- /.photo -->
-    <div class="advantage">
+    <section class="advantage">
       <div class="container"></div>
       <!-- /.container -->
-    </div>
+    </section>
     <!-- /.advantage -->
-    <div class="exellence">
+    <section class="exellence">
       <div class="container"></div>
       <!-- /.container -->
-    </div>
+    </section>
     <!-- /.exellence -->
-    <div class="catalog">
+    <section class="catalog">
       <div class="container"></div>
       <!-- /.container -->
-    </div>
+    </section>
     <!-- /.catalog -->
-    <div class="about">
+    <section class="about">
       <div class="container"></div>
       <!-- /.container -->
-    </div>
+    </section>
     <!-- /.about -->
-    <div class="offer"></div>
+    <section class="offer"></section>
     <!-- /.offer -->
-    <div class="galery"></div>
+    <section class="galery"></section>
     <!-- /.galery -->
-  </div>
+  </main>
   <!-- /.main -->
   <div class="footer">
     <div class="container"></div>

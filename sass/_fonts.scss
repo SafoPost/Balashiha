@@ -1,18 +1,10 @@
 @font-face {
-  font-family: 'Roboto';
-  src:
-  url('../fonts/futura/Roboto-Regular.woff') format('woff'),
-  url('../fonts/futura/Roboto-Regular.woff2') format('woff2');
+  font-family: 'Nokia Sans S60';
+  src: 
+  url('../fonts/nokia/NokiaSansS60.woff2') format('woff2'),
+  url('../fonts/nokia/NokiaSansS60.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: 'Roboto Condensed';
-  src:
-  url('../fonts/futura/RobotoCondensed-Regular.woff') format('woff'),
-  url('../fonts/futura/RobotoCondensed-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+

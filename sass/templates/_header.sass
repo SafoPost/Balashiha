@@ -1,31 +1,105 @@
 .header
-  background: ##faeabc url('../img/bg-header.jpg') no-repeat center / cover
+  background: #faeabc url('../img/bg-header.jpg') no-repeat center / cover
   width: 100%
-  height: 4rem
+  height: 5.2rem
   top: 0
-  left: 0
-  right: 0
   position: fixed
   z-index: 199
 .brand
-  left: 0
+  max-width: 22.7rem
+  display: flex
+  justify-content: flex-start
+  margin-right: 0.5rem
   &__logo
+    display: flex
+    justify-content: center
+    position: relative
+    left: 3.6rem
+    &:before
+      content: ''
+      width: 0
+      height: 0
+      border-width: 6.1rem 3.7rem 0.9rem
+      border-style: solid
+      border-color: #fafafa #fafafa transparent
+      position: absolute
+    &:after
+      content: ''
+      width: 0
+      height: 0
+      border-width: 5.8rem 3.4rem 0.8rem
+      border-style: solid
+      border-color: $primary $primary transparent
+      position: absolute
     &__image
+      width: 5rem
+      height: 5rem
+      margin: 0.6rem 1rem 1.06rem
+      background-color: $light
+      display: block
+      mask-image: url('../img/logo.svg')
+      position: relative
   &__title
+    text-decoration: none
+    margin-left: 1.5rem
+    margin-top: 1.65rem
     &--primary
-      font-family: "Nokia - Sans - S 60"
-      font-size: 25px
-      font-weight: 700
-      line-height: 21px
+      font-family: 'Nokia Sans S60', sans-serif
+      font-size: 1.65rem
+      font-weight: bold
+      line-height: 1.4rem
+      color: $dark
       text-transform: uppercase
+      padding: 0
     &--secondary
-      color: #f64747
-      font-family: Roboto
-      font-size: 11px
+      color: $primary
+      font-size: 0.68rem
       font-weight: 300
-      line-height: 13.55px
+      line-height: 0.8rem
+      margin-top: 0
 .contacts
-  right: 0
+  max-width: 10.6rem
+  display: flex
+  flex-direction: column
   &__phone
+    text-decoration: none
+    color: $dark
+    font-size: 1.06rem
+    margin-top: 0.9rem
     &--primary
+      font-size: 24px
+      padding-left: 0.3rem
+  &__block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 0.3rem
+  &__call
+    width: 15px
+    height: 15px
+    background-color: $primary
+    mask-image: url('../img/call.svg')
+    margin: 0
+  &__arrow
+    width: 18px
+    height: 5px
+    background-color: $primary
+    mask-image: url('../img/arrow.svg')
+    margin: 0
   &__button
+    padding: 0
+    color: $primary
+    background-color: transparent
+    border: none
+    border-bottom: 2px dotted $primary
+    font-size: 14px
+    font-weight: 300
+    display: flex
+    justify-content: space-between
+.menu
+  width: 1006px
+  max-width: 90%
+  margin: auto
+  position: relative
+  display: flex
+  justify-content: space-between
