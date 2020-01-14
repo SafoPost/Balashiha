@@ -617,13 +617,19 @@ body {
   height: 618px;
   margin-top: 5.2rem;
   font-family: "Roboto Condensed",sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hero__background {
   position: absolute;
-  width: 1000px;
+  width: 70%;
   height: 100%;
-  margin: auto;
+  padding-left: 3.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -633,13 +639,8 @@ body {
   padding-bottom: 4rem;
 }
 
-.hero__background--primary {
-  display: inline-block;
-  margin-left: -7.4rem;
-}
-
 .hero__background--secondary {
-  margin: 0 -2.5rem 0.8rem 11.2rem;
+  margin: 0 0 0.8rem 11.4rem;
 }
 
 .hero__title {
