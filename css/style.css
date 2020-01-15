@@ -354,20 +354,30 @@ template {
   max-width: 90%;
   height: 100%;
   margin: auto;
+  position: relative;
 }
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 15px;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
 }
 
 main {
   margin: auto;
+  padding-top: 5.3rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
 }
 
 .section {
@@ -407,7 +417,7 @@ main {
 }
 
 @media screen and (max-width: 1600px) {
-  body {
+  html {
     font-size: 14px;
   }
 }
@@ -418,8 +428,8 @@ main {
 }
 
 .form__input {
-  width: 15.8rem;
-  height: 2.8rem;
+  width: 16.7rem;
+  height: 2.98rem;
   border: none;
   margin-bottom: 0.4rem;
   border-radius: 4px;
@@ -429,28 +439,28 @@ main {
 
 .form__input--name {
   background-image: url("../img/name.svg");
-  background-position: 13.7rem 0.6rem;
+  background-position: 14.45rem 0.6rem;
   background-repeat: no-repeat;
 }
 
 .form__input--email {
   background-image: url("../img/email.svg");
-  background-position: 13.7rem 0.6rem;
+  background-position: 14.45rem 0.6rem;
   background-repeat: no-repeat;
 }
 
 .form__input--tel {
   background-image: url("../img/tel.svg");
-  background-position: 13.7rem 0.6rem;
+  background-position: 14.45rem 0.6rem;
   background-repeat: no-repeat;
 }
 
 .form__button {
   display: block;
-  width: 15.8rem;
-  padding: 1.35rem 2rem;
+  width: 16.7rem;
+  padding: 1.48rem 2rem;
   margin: auto;
-  margin-top: 0.45rem;
+  margin-top: 0.55rem;
   border: none;
   border-radius: 4px;
   background: -webkit-gradient(linear, left bottom, left top, from(#03c9a9), to(#13efcb));
@@ -466,13 +476,13 @@ main {
 
 .form__text {
   color: #fff;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 300;
   line-height: 0.73rem;
-  max-width: 17.2rem;
+  max-width: 18rem;
   text-align: center;
   margin: auto;
-  margin-top: 0.7rem;
+  margin-top: 0.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,21 +501,22 @@ main {
 .header {
   background: #faeabc url("../img/bg-header.jpg") no-repeat center/cover;
   width: 100%;
-  height: 5.2rem;
+  height: 5.3rem;
   top: 0;
+  left: 0;
+  right: 0;
   position: fixed;
   z-index: 199;
 }
 
 .brand {
-  max-width: 22.7rem;
+  max-width: 23rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-right: 0.5rem;
 }
 
 .brand__logo {
@@ -523,9 +534,9 @@ main {
   content: '';
   width: 0;
   height: 0;
-  border-width: 6.1rem 3.7rem 0.9rem;
+  border-width: 6.5rem 4rem 0.8rem;
   border-style: solid;
-  border-color: #fafafa #fafafa transparent;
+  border-color: #fff #fff transparent;
   position: absolute;
 }
 
@@ -533,15 +544,15 @@ main {
   content: '';
   width: 0;
   height: 0;
-  border-width: 5.8rem 3.4rem 0.8rem;
+  border-width: 6.2rem 3.6rem 0.7rem;
   border-style: solid;
   border-color: #f64747 #f64747 transparent;
   position: absolute;
 }
 
 .brand__logo__image {
-  width: 5rem;
-  height: 5rem;
+  width: 5.2rem;
+  height: 5.2rem;
   margin: 0.6rem 1rem 1.06rem;
   background-color: #fff;
   display: block;
@@ -552,13 +563,13 @@ main {
 
 .brand__title {
   text-decoration: none;
-  margin-left: 1.5rem;
-  margin-top: 1.65rem;
+  margin-left: 1.7rem;
+  margin-top: 1.7rem;
 }
 
 .brand__title--primary {
   font-family: 'Nokia Sans S60', sans-serif;
-  font-size: 1.65rem;
+  font-size: 1.75rem;
   font-weight: bold;
   line-height: 1.4rem;
   color: #393939;
@@ -568,7 +579,7 @@ main {
 
 .brand__title--secondary {
   color: #f64747;
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 300;
   line-height: 0.8rem;
   margin-top: 0;
@@ -588,13 +599,13 @@ main {
 .contacts__phone {
   text-decoration: none;
   color: #393939;
-  font-size: 1.06rem;
+  font-size: 1.05rem;
   margin-top: 0.9rem;
 }
 
 .contacts__phone--primary {
-  font-size: 24px;
-  padding-left: 0.3rem;
+  font-size: 1.6rem;
+  padding-left: 0.2rem;
 }
 
 .contacts__block {
@@ -607,12 +618,12 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 0.3rem;
+  margin-top: 0.35rem;
 }
 
 .contacts__call {
-  width: 15px;
-  height: 15px;
+  width: 1rem;
+  height: 1rem;
   background-color: #f64747;
   -webkit-mask-image: url("../img/call.svg");
           mask-image: url("../img/call.svg");
@@ -620,8 +631,8 @@ main {
 }
 
 .contacts__arrow {
-  width: 18px;
-  height: 5px;
+  width: 1.2rem;
+  height: 0.33rem;
   background-color: #f64747;
   -webkit-mask-image: url("../img/arrow.svg");
           mask-image: url("../img/arrow.svg");
@@ -634,7 +645,7 @@ main {
   background-color: transparent;
   border: none;
   border-bottom: 2px dotted #f64747;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 300;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -645,7 +656,7 @@ main {
 }
 
 .menu {
-  width: 1006px;
+  width: 1000px;
   max-width: 90%;
   margin: auto;
   position: relative;
@@ -660,8 +671,7 @@ main {
 .hero {
   position: relative;
   width: 100%;
-  height: 43.8rem;
-  padding-top: 5.2rem;
+  height: 41.3rem;
   font-family: "Roboto Condensed",sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -673,41 +683,49 @@ main {
 
 .hero__background {
   position: absolute;
-  max-width: 70%;
-  height: 36rem;
-  padding-left: 3.2rem;
+  width: 100%;
+  height: 41.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .hero__background--primary {
-  margin-top: -5.2rem;
+  margin-bottom: 4.3rem;
 }
 
 .hero__background--secondary {
-  margin: 0 -6rem 0.8rem 11rem;
+  margin: 0 -9.2rem 5rem 12rem;
 }
 
 .hero__title {
   position: relative;
-  max-width: 64.6rem;
-  padding-top: 3rem;
-  margin: 0;
+  max-width: 65.5rem;
+  padding-top: 3.5rem;
+  margin: auto;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.41rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  line-height: 2.22rem;
+  line-height: 2.3rem;
   color: #272727;
 }
 
 .hero__title--primary {
-  font-size: 2.95rem;
+  font-size: 3.15rem;
   line-height: 2.9rem;
   color: #7d3803;
 }
 
 .hero__content {
   position: relative;
-  height: 24.73rem;
+  height: 28rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -720,20 +738,20 @@ main {
 }
 
 .hero__row {
-  width: 46rem;
+  width: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: -4.25rem;
+  margin-bottom: -3rem;
   margin-left: -1rem;
 }
 
 .hero__col {
-  width: 14.1rem;
-  height: 15.3rem;
+  width: 15.1rem;
+  height: 16.4rem;
   background: transparent url("../img/circle-hero.png") no-repeat center/cover;
   text-align: center;
-  padding-top: 4.3rem;
+  padding-top: 4.5rem;
   font-size: 1.06rem;
   font-weight: bold;
   line-height: 1.2rem;
@@ -743,29 +761,37 @@ main {
 .hero__wrap {
   position: relative;
   background: transparent url("../img/wrap-hero.png") no-repeat center/cover;
-  width: 100%;
-  height: 100%;
-  margin-left: 1rem;
-  margin-right: -1.4rem;
-  margin-bottom: -3.3rem;
+  width: 20.4rem;
+  height: 27.2rem;
+  margin-right: 0.2rem;
+  margin-bottom: -2.3rem;
 }
 
 .hero__wrap__title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #fdf1cf;
   font-weight: 300;
   line-height: 1.4rem;
-  margin-top: 1.3rem;
+  margin-top: 1.8rem;
 }
 
 .hero__wrap__title--primary {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .hero__form {
-  padding-top: 0.3rem;
+  padding-top: 0.4rem;
+}
+
+@media screen and (max-width: 1600px) {
+  .hero__background {
+    margin-bottom: 1.6rem;
+  }
+  .hero--secondary {
+    margin: 0 -4rem 2.4rem 5rem;
+  }
 }
 
 .photo {
@@ -788,7 +814,7 @@ main {
 }
 
 .photo__background--first {
-  padding-left: 15.4%;
+  padding-left: 15%;
 }
 
 .photo__background--second {
@@ -823,7 +849,7 @@ main {
   position: absolute;
   max-width: 90%;
   height: 36rem;
-  padding-left: 15.2rem;
+  padding-left: 14.5rem;
   padding-top: 0.3rem;
 }
 
@@ -834,6 +860,7 @@ main {
 }
 
 .advantage__content {
+  position: relative;
   margin-top: 1.4rem;
   display: -webkit-box;
   display: -ms-flexbox;

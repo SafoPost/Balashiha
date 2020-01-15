@@ -1,15 +1,17 @@
 .header
   background: #faeabc url('../img/bg-header.jpg') no-repeat center / cover
   width: 100%
-  height: 5.2rem
+  height: 5.3rem
   top: 0
+  left: 0
+  right: 0
   position: fixed
   z-index: 199
 .brand
-  max-width: 22.7rem
+  max-width: 23rem
   display: flex
   justify-content: flex-start
-  margin-right: 0.5rem
+  // margin-right: 0.8rem
   &__logo
     display: flex
     justify-content: center
@@ -19,21 +21,21 @@
       content: ''
       width: 0
       height: 0
-      border-width: 6.1rem 3.7rem 0.9rem
+      border-width: 6.5rem 4rem 0.8rem
       border-style: solid
-      border-color: #fafafa #fafafa transparent
+      border-color: $light $light transparent
       position: absolute
     &:after
       content: ''
       width: 0
       height: 0
-      border-width: 5.8rem 3.4rem 0.8rem
+      border-width: 6.2rem 3.6rem 0.7rem
       border-style: solid
       border-color: $primary $primary transparent
       position: absolute
     &__image
-      width: 5rem
-      height: 5rem
+      width: 5.2rem
+      height: 5.2rem
       margin: 0.6rem 1rem 1.06rem
       background-color: $light
       display: block
@@ -41,11 +43,11 @@
       position: relative
   &__title
     text-decoration: none
-    margin-left: 1.5rem
-    margin-top: 1.65rem
+    margin-left: 1.7rem
+    margin-top: 1.7rem
     &--primary
       font-family: 'Nokia Sans S60', sans-serif
-      font-size: 1.65rem
+      font-size: 1.75rem
       font-weight: bold
       line-height: 1.4rem
       color: $dark
@@ -53,7 +55,7 @@
       padding: 0
     &--secondary
       color: $primary
-      font-size: 0.68rem
+      font-size: 0.72rem
       font-weight: 300
       line-height: 0.8rem
       margin-top: 0
@@ -64,25 +66,25 @@
   &__phone
     text-decoration: none
     color: $dark
-    font-size: 1.06rem
+    font-size: 1.05rem
     margin-top: 0.9rem
     &--primary
-      font-size: 24px
-      padding-left: 0.3rem
+      font-size: 1.6rem
+      padding-left: 0.2rem
   &__block
     display: flex
     justify-content: space-between
     align-items: center
-    margin-top: 0.3rem
+    margin-top: 0.35rem
   &__call
-    width: 15px
-    height: 15px
+    width: 1rem
+    height: 1rem
     background-color: $primary
     mask-image: url('../img/call.svg')
     margin: 0
   &__arrow
-    width: 18px
-    height: 5px
+    width: 1.2rem
+    height: 0.33rem
     background-color: $primary
     mask-image: url('../img/arrow.svg')
     margin: 0
@@ -92,12 +94,12 @@
     background-color: transparent
     border: none
     border-bottom: 2px dotted $primary
-    font-size: 14px
+    font-size: 0.9rem
     font-weight: 300
     display: flex
     justify-content: space-between
 .menu
-  width: 1006px
+  width: 1000px
   max-width: 90%
   margin: auto
   position: relative
