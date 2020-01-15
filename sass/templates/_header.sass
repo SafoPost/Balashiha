@@ -11,7 +11,6 @@
   max-width: 23rem
   display: flex
   justify-content: flex-start
-  // margin-right: 0.8rem
   &__logo
     display: flex
     justify-content: center
@@ -38,7 +37,6 @@
       height: 5.2rem
       margin: 0.6rem 1rem 1.06rem
       background-color: $light
-      display: block
       mask-image: url('../img/logo.svg')
       position: relative
   &__title
@@ -63,6 +61,7 @@
   max-width: 10.6rem
   display: flex
   flex-direction: column
+  align-items: flex-end
   &__phone
     text-decoration: none
     color: $dark
@@ -105,3 +104,49 @@
   position: relative
   display: flex
   justify-content: space-between
+
+@media screen and ( max-width: 1659px )
+  .brand
+    &__logo
+      &__image
+        width: 5.6rem
+        height: 5.6rem
+        margin: 0.6rem 0.8rem 1.06rem
+
+@media screen and ( max-width: 1199px )
+  .brand
+    &__logo
+      &__image
+        width: 6rem
+        height: 6rem
+        margin: 0.6rem 0.6rem 1.06rem
+  .contacts
+    &__phone
+      margin-top: 1.7rem
+    &__block
+      display: none
+
+@media screen and ( max-width: 575px )
+  .brand
+    &__logo
+      display: none
+      &__image
+        display: none
+        // background: none
+    &__title
+      margin-left: 0
+
+@media screen and ( max-width: 374px )
+  .brand
+    &__title
+      &--primary
+        font-size: 1.65rem
+      &--secondary
+        font-size: 0.68rem
+  .contacts
+    &__phone
+      margin-top: 2rem
+      font-size: 1.2rem
+      &--primary
+        font-size: 1.2rem
+        padding-left: 0

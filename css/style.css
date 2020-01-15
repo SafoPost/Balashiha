@@ -416,9 +416,21 @@ img {
   margin-top: 0.2rem;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1659px) {
   html {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 12px;
   }
 }
 
@@ -555,7 +567,6 @@ img {
   height: 5.2rem;
   margin: 0.6rem 1rem 1.06rem;
   background-color: #fff;
-  display: block;
   -webkit-mask-image: url("../img/logo.svg");
           mask-image: url("../img/logo.svg");
   position: relative;
@@ -594,6 +605,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .contacts__phone {
@@ -666,6 +680,57 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 1659px) {
+  .brand__logo__image {
+    width: 5.6rem;
+    height: 5.6rem;
+    margin: 0.6rem 0.8rem 1.06rem;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .brand__logo__image {
+    width: 6rem;
+    height: 6rem;
+    margin: 0.6rem 0.6rem 1.06rem;
+  }
+  .contacts__phone {
+    margin-top: 1.7rem;
+  }
+  .contacts__block {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .brand__logo {
+    display: none;
+  }
+  .brand__logo__image {
+    display: none;
+  }
+  .brand__title {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .brand__title--primary {
+    font-size: 1.65rem;
+  }
+  .brand__title--secondary {
+    font-size: 0.68rem;
+  }
+  .contacts__phone {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+  .contacts__phone--primary {
+    font-size: 1.2rem;
+    padding-left: 0;
+  }
 }
 
 .hero {
@@ -785,12 +850,228 @@ img {
   padding-top: 0.4rem;
 }
 
-@media screen and (max-width: 1600px) {
-  .hero__background {
+@media screen and (max-width: 1659px) {
+  .hero__background--primary {
     margin-bottom: 1.6rem;
   }
-  .hero--secondary {
-    margin: 0 -4rem 2.4rem 5rem;
+  .hero__background--secondary {
+    margin: 0 -4rem 3.8rem 7rem;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .hero__background--secondary {
+    margin: 0 0 3.8rem 0;
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  .hero__background--primary {
+    margin-right: 20rem;
+  }
+  .hero__background--secondary {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .hero__background--primary {
+    margin-right: 13rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hero {
+    height: 52.3rem;
+  }
+  .hero__background {
+    height: 52.3rem;
+  }
+  .hero__background--primary {
+    margin-right: 0;
+  }
+  .hero__title {
+    max-width: 30rem;
+    padding-top: 5rem;
+    text-align: left;
+    margin-left: 8.8rem;
+  }
+  .hero__title--primary {
+    font-size: 3.15rem;
+    line-height: 2.9rem;
+    color: #7d3803;
+  }
+  .hero__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .hero__row {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero__wrap {
+    background-image: none;
+    background: #f64747;
+    border: 4px solid #fff9e6;
+    width: 20rem;
+    min-height: 24.5rem;
+    margin-right: 0;
+    margin-bottom: 6.2rem;
+  }
+  .hero__wrap__title {
+    margin-top: 1.6rem;
+  }
+  .hero__wrap__title--primary {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 849px) {
+  .hero {
+    height: 55rem;
+  }
+  .hero__background {
+    height: 55rem;
+  }
+  .hero__background--primary {
+    max-width: 80%;
+    padding-bottom: 5rem;
+  }
+  .hero__title {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    height: 55rem;
+  }
+  .hero__background {
+    height: 55rem;
+  }
+  .hero__background--primary {
+    max-width: 90%;
+    padding-bottom: 8rem;
+  }
+  .hero__title {
+    font-size: 1.2rem;
+    max-width: 21rem;
+    padding-top: 8.8rem;
+    margin-left: 0.3rem;
+  }
+  .hero__title--primary {
+    font-size: 2.5rem;
+  }
+  .hero__content {
+    height: 27rem;
+  }
+  .hero__wrap {
+    margin-bottom: 11rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero {
+    height: 71rem;
+    background: #fff9e6;
+  }
+  .hero__background {
+    background: #fff;
+    height: 58rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .hero__background--primary {
+    padding-top: 19rem;
+  }
+  .hero__title {
+    font-size: 1.2rem;
+    max-width: 28rem;
+    padding-top: 4rem;
+  }
+  .hero__title--primary {
+    font-size: 3rem;
+  }
+  .hero__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 51rem;
+  }
+  .hero__row {
+    padding-top: 13rem;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero__col {
+    background-image: none;
+    width: 100px;
+    height: 100px;
+    margin: 0 0.5rem;
+    padding: 0;
+    background: #fff9e6;
+    border: 4px solid #7d3803;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero__wrap {
+    margin: 0;
+    max-height: 23.5rem;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .hero {
+    height: 60rem;
+  }
+  .hero__background {
+    height: 48rem;
+  }
+  .hero__title {
+    font-size: 1rem;
+  }
+  .hero__title--primary {
+    font-size: 2.2rem;
+  }
+  .hero__content {
+    height: 41rem;
+  }
+  .hero__row {
+    padding-top: 7rem;
+  }
+  .hero__col {
+    width: 80px;
+    height: 80px;
+    font-size: 0.7rem;
   }
 }
 
