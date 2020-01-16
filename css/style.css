@@ -1106,7 +1106,7 @@ img {
 .photo {
   background-color: #fff9e6;
   width: 100%;
-  height: 508px;
+  height: 33.86rem;
 }
 
 .photo__background {
@@ -1324,20 +1324,19 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100;
+  width: 100%;
   height: 39.2rem;
-  padding-left: 14.5rem;
   padding-top: 0.3rem;
 }
 
 .advantage__background--first {
   padding-bottom: 0.2rem;
-  padding-left: 0.3rem;
+  padding-left: 6.4rem;
 }
 
 .advantage__background--second {
   padding-top: 4.3rem;
-  padding-left: 29rem;
+  padding-left: 28.8rem;
 }
 
 .advantage__content {
@@ -1357,16 +1356,6 @@ img {
   margin-right: -0.2rem;
 }
 
-@media screen and (max-width: 1800px) {
-  .advantage__background--first {
-    padding-left: 0;
-    margin-left: -3rem;
-  }
-  .advantage__background--second {
-    padding-left: 25rem;
-  }
-}
-
 @media screen and (max-width: 1659px) {
   .advantage__background {
     -webkit-box-align: end;
@@ -1374,12 +1363,11 @@ img {
             align-items: flex-end;
   }
   .advantage__background--first {
-    margin: 0;
-    padding-left: 3rem;
-    max-height: 80%;
+    padding-left: 5rem;
+    max-height: 90%;
   }
   .advantage__background--second {
-    padding-left: 17rem;
+    padding-left: 22rem;
   }
 }
 
@@ -1417,7 +1405,7 @@ img {
 .exellence {
   background-color: #fff9e6;
   width: 100%;
-  height: 564px;
+  height: 37.6rem;
   padding-top: 0.7rem;
 }
 
@@ -1538,5 +1526,170 @@ img {
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
   }
+}
+
+.catalog {
+  width: 100%;
+  height: 57rem;
+  padding-top: 0.95rem;
+}
+
+.catalog__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -0.7rem;
+  margin-left: -1.2rem;
+  margin-right: -1.2rem;
+}
+
+.catalog__card {
+  width: 22.5em;
+  height: 23.6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.3rem;
+}
+
+.catalog__card:hover {
+  border: 1px solid rgba(57, 57, 57, 0.3);
+}
+
+.catalog__card__image__1 {
+  position: absolute;
+  padding-top: 0.75rem;
+  padding-right: 0.55rem;
+}
+
+.catalog__card__image__2 {
+  position: absolute;
+  padding-top: 0.7rem;
+  padding-right: 0.2rem;
+}
+
+.catalog__card__image__3 {
+  position: absolute;
+  padding-top: 1rem;
+  padding-left: 0.6rem;
+}
+
+.catalog__card__image__4 {
+  position: absolute;
+  padding-top: 0.45rem;
+  padding-left: 0.5rem;
+}
+
+.catalog__card__image__5 {
+  position: absolute;
+  padding-top: 1.25rem;
+  padding-right: 0.65rem;
+}
+
+.catalog__card__image__6 {
+  position: absolute;
+  padding-right: 0.3rem;
+}
+
+.catalog__card__value {
+  position: relative;
+  text-align: center;
+  width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.catalog__card__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.catalog__card__text {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.catalog__card__buttom {
+  padding: 0.8rem 1.6rem;
+  background-color: #fff;
+  color: #f64747;
+  border: 1px solid #f64747;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-decoration: none;
+  max-width: 10rem;
+  max-height: 2.73rem;
+  margin-bottom: 1.6rem;
+}
+
+.catalog__card__buttom:hover {
+  background-color: #f64747;
+  color: #fff;
+}
+
+@media screen and (max-width: 1199px) {
+  .catalog {
+    height: auto;
+  }
+  .catalog__content {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.about {
+  width: 100%;
+  height: 43rem;
+  background-color: #fff9e6;
+}
+
+.offer {
+  width: 100%;
+  height: 22.26rem;
+  background: #e59147 url("../img/bg-offer.gpg") no-repeat center/cover;
+}
+
+.galery {
+  width: 100%;
+  height: 26.66rem;
+}
+
+.map {
+  width: 100%;
+  height: 37.6rem;
+  background-color: #fff9e6;
+}
+
+.footer {
+  width: 100%;
+  height: 10.8rem;
+  background-color: #363636;
 }
 /*# sourceMappingURL=style.css.map */
