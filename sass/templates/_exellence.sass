@@ -1,0 +1,83 @@
+.exellence
+  background-color: $beige
+  width: 100%
+  height: 564px
+  padding-top: 0.7rem
+  &__content
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: auto
+  &__card
+    padding-top: 0.4rem
+    padding-bottom: 1.23rem
+    // width: 45%
+    display: flex
+    // align-items: center
+    // justify-content: space-between
+    &__substrate
+      width: 98px
+      height: 98px
+      background: url('../img/substrate.png') no-repeat center / cover
+      display: flex
+      justify-content: center
+      align-items: center
+      &__image
+        &__1
+          width: 40px
+          padding-top: 5px
+        &__2
+          width: 44px
+          padding-bottom: 3px
+          padding-left: 6px
+        &__3
+          width: 40px
+          padding-top: 2px
+          padding-right: 2px
+        &__4
+          width: 52px
+          padding-top: 2px
+        &__5
+          width: 62px
+          padding-left: 4px
+          padding-bottom: 4px
+        &__6
+          width: 52px
+          padding-left: 5px
+    &__value
+      width: 25.4rem
+      padding-left: 1.6rem
+
+    &__title
+      font-size: 1.2rem
+      // padding-top: 0.3rem
+      margin-top: 0
+      margin-bottom: 0.5rem
+      font-weight: bold
+    &__text
+      font-size: 0.98rem
+      margin: 0
+      font-weight: 300
+      line-height: 1.4rem
+
+@media screen and ( max-width: 991px )
+  .exellence
+    &__card
+      max-width: 50%
+      &__value
+        flex-basis: 60%
+
+@media screen and ( max-width: 767px )
+  .exellence
+    height: auto
+    &__content
+      justify-content: center
+    &__card
+      max-width: 100%
+      width: 40rem
+
+@media screen and ( max-width: 767px )
+  .exellence
+    &__card
+      &__value
+        flex-basis: 70%

@@ -1,17 +1,22 @@
 .advantage
-  height: 38rem
+  width: 100%
+  height: 39.3rem
+  padding-top: 0.25rem
   &__background
     position: absolute
-    max-width: 90%
-    height: 36rem
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100
+    height: 39.2rem
     padding-left: 14.5rem
     padding-top: 0.3rem
     &--first
-
+      padding-bottom: 0.2rem
+      padding-left: 0.3rem
     &--second
-      margin-left: 27rem
-      margin-right: -5rem
-      margin-bottom: 5.2rem
+      padding-top: 4.3rem
+      padding-left: 29rem
   &__content
     position: relative
     margin-top: 1.4rem
@@ -20,5 +25,49 @@
   &__video
     position: relative
     // background: $dark ('../img/video-mask.jpg') no-repeat center / cover
-    width: 39.2rem
-    height: 25.4rem
+    width: 42rem
+    // height: 25.4rem
+    margin-right: -0.2rem
+
+@media screen and ( max-width: 1800px )
+  .advantage
+    &__background
+      &--first
+        padding-left: 0
+        margin-left: -3rem
+      &--second
+        padding-left: 25rem
+
+@media screen and ( max-width: 1659px )
+  .advantage
+    &__background
+      align-items: flex-end
+      &--first
+        margin: 0
+        padding-left: 3rem
+        max-height: 80%
+      &--second
+        padding-left: 17rem
+
+@media screen and ( max-width: 1439px )
+  .advantage
+    &__background
+      align-items: center
+      &--first
+        display: none
+      &--second
+        padding-left: 35rem
+    &__content
+      justify-content: center
+
+@media screen and ( max-width: 1199px )
+  .advantage
+    &__background
+      &--second
+        padding-left: 23rem
+
+@media screen and ( max-width: 991px )
+  .advantage
+    &__background
+      &--second
+        display: none
