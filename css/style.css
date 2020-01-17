@@ -558,6 +558,62 @@ input.invalid {
   border: 1px solid #393939;
 }
 
+#hero-form-name-error {
+  margin-top: -1.3rem;
+  color: #f64747;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+#hero-form-email-error {
+  margin-top: -1.3rem;
+  color: #f64747;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+#hero-form-phone-error {
+  margin-top: -1.3rem;
+  color: #f64747;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+#offer-form-name-error {
+  display: inline;
+  margin-top: -0.9rem;
+  color: #f64747;
+  font-size: 0.8rem;
+}
+
+#offer-form-email-error {
+  display: inline;
+  margin-top: -0.9rem;
+  color: #f64747;
+  font-size: 0.8rem;
+}
+
+#offer-form-phone-error {
+  display: inline;
+  margin-top: -0.9rem;
+  color: #f64747;
+  font-size: 0.8rem;
+}
+
+#modal-user-name-error {
+  margin-top: -1.3rem;
+  color: #f64747;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+#modal-user-phone-error {
+  margin-top: -1.3rem;
+  color: #f64747;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
 .header {
   background: #faeabc url("../img/bg-header.jpg") no-repeat center/cover;
   width: 100%;
@@ -634,6 +690,11 @@ input.invalid {
   color: #393939;
   text-transform: uppercase;
   padding: 0;
+  cursor: pointer;
+}
+
+.brand__title--primary:hover {
+  color: #f64747;
 }
 
 .brand__title--secondary {
@@ -642,6 +703,11 @@ input.invalid {
   font-weight: 300;
   line-height: 0.8rem;
   margin-top: 0;
+  cursor: pointer;
+}
+
+.brand__title--secondary:hover {
+  color: #393939;
 }
 
 .contacts {
@@ -838,12 +904,12 @@ input.invalid {
 
 .hero__title {
   position: relative;
-  max-width: 65.5rem;
+  max-width: 100%;
   padding-top: 3.5rem;
   margin: auto;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.49rem;
   font-weight: bold;
   line-height: 2.3rem;
   color: #272727;
@@ -1890,6 +1956,22 @@ input.invalid {
   margin-top: 1.8rem;
 }
 
+.offer__form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 3.8rem;
+}
+
 .offer__form__input {
   margin: 0 0.7rem;
   padding-left: 0.8rem;
@@ -2026,10 +2108,9 @@ input.invalid {
   padding-bottom: 0.9rem;
 }
 
-.footer__menu__social {
-  cursor: pointer;
+.pluso {
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 @media screen and (max-width: 767px) {

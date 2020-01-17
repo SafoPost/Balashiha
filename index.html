@@ -16,11 +16,11 @@
   <header class="header">
     <div class="menu">
       <div class="brand">
-        <a href="#" class="brand__logo"></a>
+        <a href="http://balashiha" class="brand__logo"></a>
         <!-- <object type="image/svg+xml" data="img/logo.svg" class="brand__logo__image"></object> -->
         <!-- <img src="img/logo.svg" alt="Logo" class="brand__logo__image"> -->
         <div class="brand__logo__image"></div>
-        <a href="#" class="brand__title">
+        <a href="http://balashiha" class="brand__title">
           <strong class="brand__title--primary">Балашиха Хлеб</strong>
           <p class="brand__title--secondary">хлебобулочные и кондитерские изделия</p>
         </a>
@@ -38,7 +38,7 @@
   </header>
   <!-- /.header -->
   <main class="main">
-    <section class="hero">
+    <section class="hero" id="section-hero">
       <div class="hero__background">
         <img src="img/bg-hero.jpg" alt="Хлеб" class="hero__background--primary">
         <img src="img/bg-hero-2.jpg" alt="Пшеница" class="hero__background--secondary">
@@ -324,9 +324,11 @@
       <div class="offer__content">
         <form action="send.php" method="POST" id="offer-form" class="form offer__form">
           <div class="form offer__form">
-            <input type="text" name="userName" class="form__input form__input--name offer__form__input" id="offer-form-name" placeholder="Ваше имя">
-            <input type="email" name="userEmail" class="form__input form__input--email offer__form__input" id="offer-form-email" placeholder="Ваш e-mail">
-            <input type="tel" name="userPhone" class="form__input form__input--tel offer__form__input" id="offer-form-phone" placeholder="Ваш номер телефона">
+            <div class="offer__form__group">
+              <input type="text" name="userName" class="form__input form__input--name offer__form__input" id="offer-form-name" placeholder="Ваше имя">
+              <input type="email" name="userEmail" class="form__input form__input--email offer__form__input" id="offer-form-email" placeholder="Ваш e-mail">
+              <input type="tel" name="userPhone" class="form__input form__input--tel offer__form__input" id="offer-form-phone" placeholder="Ваш номер телефона">
+            </div>
             <button type="submit" class="form__button offer__form__button" data-toggle="modal-send">Получить сейчас!</button>
             <p class="form__text offer__form__text">Ваши данные не будут переданны третьим лицам, согласно законам РФ</p>
           </div>
@@ -394,7 +396,17 @@
     <div class="map footer__map footer__map--mobile" id="YaMapsMin"></div>
     <div class="footer__menu">
       <p class="footer__menu__text">© 1994-2014 «Балашиха Хлеб», ИНН: 7708757552, ОГРН: 1127746150080,<br>Адрес: г. Москва, ул. Неверовского, д. 9</p>
-      <img src="img/social.png" alt="Социальные сети" class="footer__menu__social">
+      <script>(function() {
+        if (window.pluso)if (typeof window.pluso.start == "function") return;
+        if (window.ifpluso==undefined) { window.ifpluso = 1;
+          var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+          s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+          s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+          var h=d[g]('body')[0];
+          h.appendChild(s);
+        }})();</script>
+      <div class="pluso" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,facebook" data-url="http://safo-post.ru/Balashiha/" data-title="Балашиха Хлеб" data-description="Дипломная работа о хлебах"></div>
+      <!-- <img src="img/social.png" alt="Социальные сети" class="footer__menu__social"> -->
     </div>
   </footer>
   <!-- /.footer -->

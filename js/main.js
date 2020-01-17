@@ -68,8 +68,8 @@ $(document).ready(function () {
     messages: {
       userName: {
         required: "Назовите своё имя",
-        minlength: "Имя не должно быть короче двух символов",
-        maxlength: "Имя не должно быть длинее 15 символов"
+        minlength: "Имя должно быть длинее 2 букв",
+        maxlength: "Имя должно быть короче 15 букв"
       },
       userPhone: {
         required: "Назовите свой телефон",
@@ -121,8 +121,8 @@ $(document).ready(function () {
     messages: {
       userName: {
         required: "Назовите своё имя",
-        minlength: "Имя не должно быть короче двух символов",
-        maxlength: "Имя не должно быть длинее 15 символов"
+        minlength: "Имя должно быть длинее 2 букв",
+        maxlength: "Имя должно быть короче 15 букв"
       },
       userPhone: {
         required: "Назовите свой телефон",
@@ -170,8 +170,8 @@ $(document).ready(function () {
     messages: {
       userName: {
         required: "Назовите своё имя",
-        minlength: "Имя не должно быть короче двух символов",
-        maxlength: "Имя не должно быть длинее 15 символов"
+        minlength: "Имя должно быть длинее 2 букв",
+        maxlength: "Имя должно быть короче 15 букв"
       },
       userPhone: {
         required: "Назовите свой телефон",
@@ -286,7 +286,8 @@ $(document).ready(function () {
   })
   function videoPlay(event) {
     event.target.playVideo();
-  }
+  };
+
 
 
 })
