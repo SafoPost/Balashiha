@@ -42,5 +42,163 @@ $(document).ready(function () {
     },
     initialSlide: 2,
     autoHeight: true
-  })
-});
+  });
+
+  // Валидация форм --------------------------------------------
+  $('#hero-form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        minlength: 10
+      },
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    // Сообщения .hero__form
+    messages: {
+      userName: {
+        required: "Назовите своё имя",
+        minlength: "Имя не должно быть короче двух символов",
+        maxlength: "Имя не должно быть длинее 15 символов"
+      },
+      userPhone: {
+        required: "Назовите свой телефон",
+        minlength: "Номер должен быть из 10 цифр"
+      },
+      userEmail: {
+        required: "Укажите свой Email",
+        email: "Введите в формате: name@domain.com"
+      }
+    },
+    // ajax .hero__form
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал: ' + response);
+          $(form)[0].reset();
+          $(send).toggleClass('send--visible');
+          $(".send__title").text(response);
+        },
+        error: function (response) {
+          console.log('Ajax не сработал: ' + response);
+        }
+      });
+    }
+  });
+  $('#offer-form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        minlength: 10
+      },
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    // Сообщения .offer__form
+    messages: {
+      userName: {
+        required: "Назовите своё имя",
+        minlength: "Имя не должно быть короче двух символов",
+        maxlength: "Имя не должно быть длинее 15 символов"
+      },
+      userPhone: {
+        required: "Назовите свой телефон",
+        minlength: "Номер должен быть из 10 цифр"
+      },
+      userEmail: {
+        required: "Укажите свой Email",
+        email: "Введите в формате: name@domain.com"
+      }
+    },
+    // ajax .offer__form
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал: ' + response);
+          $(form)[0].reset();
+          $(send).toggleClass('send--visible');
+          $(".send__title").text(response);
+        },
+        error: function (response) {
+          console.log('Ajax не сработал: ' + response);
+        }
+      });
+    }
+  });
+  $('#modal-form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        minlength: 10
+      }
+    },
+    // Сообщения .modal__form
+    messages: {
+      userName: {
+        required: "Назовите своё имя",
+        minlength: "Имя не должно быть короче двух символов",
+        maxlength: "Имя не должно быть длинее 15 символов"
+      },
+      userPhone: {
+        required: "Назовите свой телефон",
+        minlength: "Номер должен быть из 10 цифр"
+      }
+    },
+    // ajax .modal__form
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал: ' + response);
+          $(form)[0].reset();
+          $(modal).removeClass('modal--visible');
+          $(send).toggleClass('send--visible');
+          $(".send__title").text(response);
+        },
+        error: function (response) {
+          console.log('Ajax не сработал: ' + response);
+        }
+      });
+    }
+  });
+
+  // Маска для телефона ------------------------------------------
+  $('[type=tel]').mask('+7(000)000-00-00');
+
+
+
+
+})
