@@ -6,8 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <title>Балашиха Хлеб</title>
 </head>
 <body>
@@ -51,11 +53,11 @@
           </div>
           <div class="hero__wrap">
             <h3 class="hero__wrap__title"> <span class="hero__wrap__title--primary">Получите персональное</span><br>коммерческое предложение</h3>
-            <form action="send.php" id="hero-form" class="form hero__form">
+            <form action="send.php" method="POST" id="hero-form" class="form hero__form">
               <input type="text" name="userName" class="form__input form__input--name hero__form__input" id="hero-form-name" placeholder="Ваше имя">
               <input type="email" name="userEmail" class="form__input form__input--email hero__form__input" id="hero-form-email" placeholder="Ваш e-mail">
               <input type="tel" name="userPhone" class="form__input form__input--tel hero__form__input" id="hero-form-phone" placeholder="Ваш номер телефона">
-              <button type="submit" class="form__button">Получить КП!</button>
+              <button type="submit" class="form__button" data-toggle="modal-send">Получить КП!</button>
               <p class="form__text">Ваши данные не будут переданны
                 третьим лицам, согласно законам РФ</p>
             </form>
@@ -279,12 +281,12 @@
     <div class="container">
       <h2 class="section__title section__title--light">Получите персональное предложение</h2>
       <div class="offer__content">
-        <form action="send.php" id="offer-form" class="form offer__form">
+        <form action="send.php" method="POST" id="offer-form" class="form offer__form">
           <div class="form offer__form">
             <input type="text" name="userName" class="form__input form__input--name offer__form__input" id="offer-form-name" placeholder="Ваше имя">
             <input type="email" name="userEmail" class="form__input form__input--email offer__form__input" id="offer-form-email" placeholder="Ваш e-mail">
             <input type="tel" name="userPhone" class="form__input form__input--tel offer__form__input" id="offer-form-phone" placeholder="Ваш номер телефона">
-            <button type="submit" class="form__button offer__form__button">Получить сейчас!</button>
+            <button type="submit" class="form__button offer__form__button" data-toggle="modal-send">Получить сейчас!</button>
             <p class="form__text offer__form__text">Ваши данные не будут переданны третьим лицам, согласно законам РФ</p>
           </div>
         </form>
@@ -294,21 +296,90 @@
     <!-- /.container -->
   </section>
   <!-- /.offer -->
-  <div class="galery"></div>
-  <!-- /.galery -->
-  <div class="map"></div>
-  <!-- /.map -->
-  <div class="footer">
+  <!-- <div class="galery">
+    <img src="img/galery/bread-1-gray.jpg" alt="Хлеб" class="galery__image">
+    <img src="img/galery/bread-2-gray.jpg" alt="Хлеб" class="galery__image">
+    <img src="img/galery/bread-7-gray.jpg" alt="Хлеб" class="galery__image">
+    <img src="img/galery/bread-1-gray.jpg" alt="Хлеб" class="galery__image">
+    <img src="img/galery/bread-5-gray.jpg" alt="Хлеб" class="galery__image">
+    <img src="img/galery/bread-6-gray.jpg" alt="Хлеб" class="galery__image">
+    <img src="img/galery/bread-7-gray.jpg" alt="Хлеб" class="galery__image">
+    <img src="img/galery/bread-12-gray.jpg" alt="Хлеб" class="galery__image">
+    <img src="img/galery/bread-9-gray.jpg" alt="Хлеб" class="galery__image">
+    <img src="img/galery/bread-10-gray.jpg" alt="Хлеб" class="galery__image">
+    <img src="img/galery/bread-11-gray.jpg" alt="Хлеб" class="galery__image">
+    <img src="img/galery/bread-12-gray.jpg" alt="Хлеб" class="galery__image">
+  </div> -->
+  <div class="galery">
+    <div class="galery__image">
+      <img src="img/galery/bread-8-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-1-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+    <div class="galery__image">
+      <img src="img/galery/bread-4-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-2-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+    <div class="galery__image">
+      <img src="img/galery/bread-8-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-3-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+    <div class="galery__image">
+      <img src="img/galery/bread-4-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-1-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+    <div class="galery__image">
+      <img src="img/galery/bread-8-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-5-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+    <div class="galery__image">
+      <img src="img/galery/bread-4-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-6-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+    <div class="galery__image">
+      <img src="img/galery/bread-4-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-7-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+    <div class="galery__image">
+      <img src="img/galery/bread-8-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-6-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+    <div class="galery__image">
+      <img src="img/galery/bread-4-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-9-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+    <div class="galery__image">
+      <img src="img/galery/bread-8-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-10-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+    <div class="galery__image">
+      <img src="img/galery/bread-4-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-11-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+    <div class="galery__image">
+      <img src="img/galery/bread-8-color.jpg" alt="" class="galery__image--color">
+      <img src="img/galery/bread-12-gray.jpg" alt="" class="galery__image--gray">
+    </div>
+
   </div>
+  <!-- /.galery -->
+  <footer class="footer">
+    <div class="map footer__map footer__map--desktop" id="YaMaps"></div>
+    <div class="map footer__map footer__map--mobile" id="YaMapsMin"></div>
+    <div class="footer__menu">
+      <div class="footer__menu__contacts">
+        
+      </div>
+    </div>
+  </footer>
   <!-- /.footer -->
   <div class="modal">
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и&nbsp;мы&nbsp;вам&nbsp;перезвоним</h3>
-      <form action="send.php" id="modal-form" class="form modal__form">
+      <form action="send.php" method="POST" id="modal-form" class="form modal__form">
         <input type="text" name="userName" class="form__input form__input--name modal__form__input" id="modal-user-name" placeholder="Ваше имя">
         <input type="tel" name="userPhone" class="form__input form__input--tel modal__form__input" id="modal-user-phone" placeholder="Ваш номер телефона">
-        <button type="submit" class="form__button modal__form__button">Получить КП!</button>
+        <button type="submit" class="form__button modal__form__button" data-toggle="modal-send">Получить КП!</button>
         <p class="form__text modal__form__text">Ваши данные не будут переданны третьим лицам, согласно законам РФ</p>
       </form>
       <!-- /.modal__form -->
@@ -323,7 +394,10 @@
   </div>
   <!-- /.send -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

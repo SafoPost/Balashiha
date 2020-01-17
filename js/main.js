@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   var modal = $('.modal');
   var modalBtn = $('[data-toggle=modal]');
   var closeBtn = $('.modal__close');
@@ -14,22 +13,22 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
   closeSendBtn.on('click', function () {
-    send.toggleClass('send--visible');
+    send.removeClass('send--visible');
   });
 
-  document.on('click', function (event) {
+  /*document.on('click', function (event) {
     if (event.target == modal) {
-      modal.classList.remove('modal--visible');
+      modal.removeClass('modal--visible');
     }
   });
 
   document.on('keydown', function (event) {
     if (event.keyCode === 27) {
-      modal.classList.remove('modal--visible');
+      modal.removeClass('modal--visible');
     }
-  });
+  });*/
 
-  //initialize swiper when document ready
+  // Подключение swiper
   var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     pagination: {
@@ -40,9 +39,11 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    initialSlide: 2,
-    autoHeight: true
+    initialSlide: 2
   });
+
+  // Маска для телефона ------------------------------------------
+  $('[type=tel]').mask('+7(000)000-00-00');
 
   // Валидация форм --------------------------------------------
   $('#hero-form').validate({
@@ -97,6 +98,7 @@ $(document).ready(function () {
       });
     }
   });
+
   $('#offer-form').validate({
     errorClass: "invalid",
     errorElement: "div",
@@ -149,6 +151,7 @@ $(document).ready(function () {
       });
     }
   });
+
   $('#modal-form').validate({
     errorClass: "invalid",
     errorElement: "div",
@@ -195,10 +198,42 @@ $(document).ready(function () {
     }
   });
 
-  // Маска для телефона ------------------------------------------
-  $('[type=tel]').mask('+7(000)000-00-00');
+  YaMapsShown = false;
+  YaMapsMinShown = false;
+
+  $(window).scroll(function () {
+    if (!YaMapsShown) {
+      if ($(window).scrollTop() + $(window).height() > $(document).height() - 700) {
+        showYaMaps();
+        YaMapsShown = true;
+      }
+    }
+  });
+
+  function showYaMaps() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ce79f0f7e8e05dd84bab98d41ac9ee829dc4f5b8db0a7175aa19b793182aeec&amp;width=100%25&amp;height=563&amp;lang=ru_RU&amp;scroll=false";
+    document.getElementById("YaMaps").appendChild(script);
+  };
+
+  $(window).scroll(function () {
+    if (!YaMapsMinShown) {
+      if ($(window).scrollTop() + $(window).height() > $(document).height() - 500) {
+        showYaMapsMin();
+        YaMapsMinShown = true;
+      }
+    }
+  });
+
+  function showYaMapsMin() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A80a8d908d7932286e60a29d9f4460c0064bce8e449d5507a61d16254ba29e9dd&amp;width=100%25&amp;height=255&amp;lang=ru_RU&amp;scroll=false";
+    document.getElementById("YaMapsMin").appendChild(script);
+  }
 
 
-
-
+  // <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ce79f0f7e8e05dd84bab98d41ac9ee829dc4f5b8db0a7175aa19b793182aeec&amp;width=100%25&amp;height=563&amp;lang=ru_RU&amp;scroll=true"></script>
+  //   <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A80a8d908d7932286e60a29d9f4460c0064bce8e449d5507a61d16254ba29e9dd&amp;width=100%25&amp;height=255&amp;lang=ru_RU&amp;scroll=true"></script>
 })

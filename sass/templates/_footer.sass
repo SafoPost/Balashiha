@@ -1,4 +1,31 @@
 .footer
   width: 100%
-  height: 10.8rem
+  height: auto
   background-color: #363636
+  &__map
+    width: 1920px
+    max-width: 100%
+    height: 563px
+    &--mobile
+      display: none
+  &__menu
+    width: 100%
+    height: 10.8rem
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &__contacts
+      width: 35rem
+      height: 5rem
+      background-color: $beige
+
+
+@media screen and ( max-width: 767px )
+  .footer
+    &__map
+      height: 255px
+      &--desktop
+        display: none
+      &--mobile
+        display: block
