@@ -10,8 +10,8 @@
     margin-left: -1.2rem
     margin-right: -1.2rem
   &__card
-    width: 22.5em
-    height: 23.6em
+    width: 22.5rem
+    height: 23.6rem
     display: flex
     justify-content: center
     margin-bottom: 1.3rem
@@ -81,6 +81,14 @@
   .catalog
     height: auto
     &__content
-      // max-width: 90%
       margin: 0
       justify-content: center
+    // &__card
+    //   width: 22.5rem
+    //   height: 23.6rem
+
+@media screen and ( max-width: 991px )
+  .catalog
+    &__card
+      height: 25rem
+      border-bottom: 1px solid rgba($dark, 0.3)

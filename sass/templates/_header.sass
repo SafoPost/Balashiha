@@ -77,11 +77,6 @@
     justify-content: space-between
     align-items: center
     margin-top: 0.35rem
-    &:hover
-      border: 1px solid $primary
-      border-radius: 4px
-      padding: 0.1rem 0.2rem
-      box-shadow: 0px 3px 6px rgba($dark, 0.2)
   &__call
     width: 1rem
     height: 1rem
@@ -104,6 +99,11 @@
     font-weight: 300
     display: flex
     justify-content: space-between
+    &:hover
+      border: 1px solid $primary
+      border-radius: 4px
+      padding: 0.1rem 0.2rem
+      box-shadow: 0px 2px 4px rgba($dark, 0.3)
 .menu
   width: 1000px
   max-width: 90%
@@ -149,10 +149,11 @@
 @media screen and ( max-width: 374px )
   .brand
     &__title
+      margin-top: 2rem
       &--primary
         font-size: 1.65rem
       &--secondary
-        font-size: 0.68rem
+        display: none
   .contacts
     &__phone
       margin-top: 2rem
