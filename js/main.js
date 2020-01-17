@@ -231,9 +231,62 @@ $(document).ready(function () {
     script.type = "text/javascript";
     script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A80a8d908d7932286e60a29d9f4460c0064bce8e449d5507a61d16254ba29e9dd&amp;width=100%25&amp;height=255&amp;lang=ru_RU&amp;scroll=false";
     document.getElementById("YaMapsMin").appendChild(script);
+  };
+
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('advantage-player', {
+      height: '267',
+      width: '100%',
+      videoId: 'bNU1DAD3q98',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+    player = new YT.Player('about-player-1', {
+      height: '267',
+      width: '100%',
+      videoId: 'FKhIwkry - KA',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+    player = new YT.Player('about-player-2', {
+      height: '267',
+      width: '100%',
+      videoId: 'FKhIwkry - KA',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+    player = new YT.Player('about-player-3', {
+      height: '267',
+      width: '100%',
+      videoId: 'FKhIwkry - KA',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+    player = new YT.Player('about-player-4', {
+      height: '267',
+      width: '100%',
+      videoId: 'FKhIwkry - KA',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+    player = new YT.Player('about-player-5', {
+      height: '267',
+      width: '100%',
+      videoId: 'FKhIwkry - KA',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  })
+  function videoPlay(event) {
+    event.target.playVideo();
   }
 
 
-  // <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ce79f0f7e8e05dd84bab98d41ac9ee829dc4f5b8db0a7175aa19b793182aeec&amp;width=100%25&amp;height=563&amp;lang=ru_RU&amp;scroll=true"></script>
-  //   <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A80a8d908d7932286e60a29d9f4460c0064bce8e449d5507a61d16254ba29e9dd&amp;width=100%25&amp;height=255&amp;lang=ru_RU&amp;scroll=true"></script>
 })

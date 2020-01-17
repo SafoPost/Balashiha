@@ -76,7 +76,7 @@
       <div class="container">
         <h2 class="section__title">фотографии нашего завода</h2>
         <div class="photo__content">
-          <div class="swiper-container">
+          <div class="swiper-container photo__slider">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -125,8 +125,9 @@
       <div class="container">
         <h2 class="section__title">Главные преимущества за 1 минуту</h2>
         <div class="advantage__content">
-          <div class="advantage__video">
-            <img src="img/video-mask.jpg" alt="Видео">
+          <div class="advantage__video video" id="advantage-player">
+            <script src="https://www.youtube.com/iframe_api"></script>
+            <img src="img/play-icon.svg" alt="play" class="video__play">
           </div>
         </div>
         <!-- /.advantage__video -->
@@ -265,10 +266,50 @@
             <p class="about__text--primary">А это – более 100 видов хлебобулочных изделий, которые ежедневно попадают на стол наших покупателей.</p>
             <p class="about__text--secondary">На нашем комбинате трудится более 700 человек. Это не просто люди, которые  приходят сюда из-за стабильной зарплаты, это – хлебопеки, которые приходят сюда по зову сердца. А потому наш хлеб не только качественный и вкусный, но ещё и изготавливается с любовью.</p>
           </div>
-          <div class="about__video">
-            <img src="img/about-video-mask.jpg" alt="Видео">
+          <div class="swiper-container about__slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="about__video video" id="about-player-1">
+                    <script src="https://www.youtube.com/iframe_api"></script>
+                    <img src="img/play-icon.svg" alt="play" class="video__play">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="about__video video" id="about-player-2">
+                    <script src="https://www.youtube.com/iframe_api"></script>
+                    <img src="img/play-icon.svg" alt="play" class="video__play">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="about__video video" id="about-player-3">
+                    <script src="https://www.youtube.com/iframe_api"></script>
+                    <img src="img/play-icon.svg" alt="play" class="video__play">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="about__video video" id="about-player-4">
+                    <script src="https://www.youtube.com/iframe_api"></script>
+                    <img src="img/play-icon.svg" alt="play" class="video__play">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="about__video video" id="about-player-5">
+                    <script src="https://www.youtube.com/iframe_api"></script>
+                    <img src="img/play-icon.svg" alt="play" class="video__play">
+                  </div>
+                </div>
+            </div>
+            
+            <div class="swiper-nav">
+              <div class="swiper-button-prev about__swiper-button-prev"></div>
+              <div class="swiper-pagination about__swiper-pagination"></div>
+              <div class="swiper-button-next about__swiper-button-next"></div>
+            </div>
+        
           </div>
-          <img src="img/pagination.png" alt="Pagination" class="about__pagination">
+          <!-- /.swiper-container -->
         </div>
       </div>
       <!-- /.container -->
@@ -296,20 +337,6 @@
     <!-- /.container -->
   </section>
   <!-- /.offer -->
-  <!-- <div class="galery">
-    <img src="img/galery/bread-1-gray.jpg" alt="Хлеб" class="galery__image">
-    <img src="img/galery/bread-2-gray.jpg" alt="Хлеб" class="galery__image">
-    <img src="img/galery/bread-7-gray.jpg" alt="Хлеб" class="galery__image">
-    <img src="img/galery/bread-1-gray.jpg" alt="Хлеб" class="galery__image">
-    <img src="img/galery/bread-5-gray.jpg" alt="Хлеб" class="galery__image">
-    <img src="img/galery/bread-6-gray.jpg" alt="Хлеб" class="galery__image">
-    <img src="img/galery/bread-7-gray.jpg" alt="Хлеб" class="galery__image">
-    <img src="img/galery/bread-12-gray.jpg" alt="Хлеб" class="galery__image">
-    <img src="img/galery/bread-9-gray.jpg" alt="Хлеб" class="galery__image">
-    <img src="img/galery/bread-10-gray.jpg" alt="Хлеб" class="galery__image">
-    <img src="img/galery/bread-11-gray.jpg" alt="Хлеб" class="galery__image">
-    <img src="img/galery/bread-12-gray.jpg" alt="Хлеб" class="galery__image">
-  </div> -->
   <div class="galery">
     <div class="galery__image">
       <img src="img/galery/bread-8-color.jpg" alt="" class="galery__image--color">
@@ -366,9 +393,8 @@
     <div class="map footer__map footer__map--desktop" id="YaMaps"></div>
     <div class="map footer__map footer__map--mobile" id="YaMapsMin"></div>
     <div class="footer__menu">
-      <div class="footer__menu__contacts">
-        
-      </div>
+      <p class="footer__menu__text">© 1994-2014 «Балашиха Хлеб», ИНН: 7708757552, ОГРН: 1127746150080,<br>Адрес: г. Москва, ул. Неверовского, д. 9</p>
+      <img src="img/social.png" alt="Социальные сети" class="footer__menu__social">
     </div>
   </footer>
   <!-- /.footer -->

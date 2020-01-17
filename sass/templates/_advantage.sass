@@ -23,10 +23,18 @@
     justify-content: flex-end
   &__video
     position: relative
-    // background: $dark ('../img/video-mask.jpg') no-repeat center / cover
+    display: flex
+    margin: auto
     width: 42rem
-    // height: 25.4rem
+    height: 28rem
+    background: url('../img/video-mask.jpg') no-repeat center
     margin-right: -0.2rem
+.video
+  &__play
+    position: relative
+    margin: auto
+    cursor: pointer
+
 
 @media screen and ( max-width: 1659px )
   .advantage

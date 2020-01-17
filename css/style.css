@@ -554,12 +554,6 @@ img {
   padding-bottom: 0.6rem;
 }
 
-div.invalid {
-  color: #393939;
-  position: absolute;
-  margin-top: 3.8rem;
-}
-
 input.invalid {
   border: 1px solid #393939;
 }
@@ -1197,14 +1191,14 @@ input.invalid {
 }
 
 .photo__text {
-  max-width: 24.5rem;
-  font-size: 1.2rem;
+  max-width: 25.3rem;
+  font-size: 1.02rem;
   font-weight: 300;
   line-height: 1.6rem;
-  margin-right: 1rem;
+  margin-right: 0.3rem;
 }
 
-.swiper-container {
+.photo__slider {
   width: 566px;
   height: 334px;
   margin: 0;
@@ -1236,7 +1230,7 @@ input.invalid {
 }
 
 .swiper-pagination {
-  bottom: 20px;
+  bottom: 1.65rem;
   opacity: 1;
 }
 
@@ -1253,13 +1247,30 @@ input.invalid {
   background-color: #f64747;
 }
 
+.swiper-pagination-bullets {
+  background-color: rgba(57, 57, 57, 0.4);
+  width: 7.6rem;
+  height: 1.6rem;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .swiper-button-prev, .swiper-button-next {
-  bottom: 29px;
+  bottom: 2.1rem;
   top: auto;
   background-size: 30px;
   width: 7px;
   height: 13px;
   color: #fff;
+  outline: none;
 }
 
 .swiper-button-prev::after, .swiper-button-next::after {
@@ -1425,8 +1436,20 @@ input.invalid {
 
 .advantage__video {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
   width: 42rem;
+  height: 28rem;
+  background: url("../img/video-mask.jpg") no-repeat center;
   margin-right: -0.2rem;
+}
+
+.video__play {
+  position: relative;
+  margin: auto;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1659px) {
@@ -1807,15 +1830,36 @@ input.invalid {
   margin-bottom: 1.1rem;
 }
 
+.about__slider {
+  width: 28rem;
+  height: 18rem;
+  margin: 0;
+}
+
 .about__video {
+  margin-bottom: 0.85rem;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0.85rem;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: url("../img/about-video-mask.jpg") no-repeat center/cover;
 }
 
-.about__pagination {
-  margin-bottom: 2rem;
+.about__play {
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+}
+
+.about__swiper-button-prev {
+  left: 160px;
+}
+
+.about__swiper-button-next {
+  right: 160px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -1905,6 +1949,7 @@ input.invalid {
   padding: 0;
   background-color: #393939;
   position: relative;
+  margin-bottom: -4px;
 }
 
 .galery__image--color {
@@ -1958,18 +2003,33 @@ input.invalid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.footer__menu__contacts {
+.footer__menu__text {
   width: 35rem;
-  height: 5rem;
-  background-color: #fff9e6;
+  color: #fefefe;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 0.9rem;
+}
+
+.footer__menu__social {
+  cursor: pointer;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 767px) {
