@@ -74,17 +74,17 @@
       height: 13px
       color: $light
       outline: none
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
       &::after
         display: none
       &:focus
-        
         outline: none
     &-prev
-      left: 233px
+      left: 15.53rem
       mask-image: url(../img/arrow-prev.svg)
       background: $light
     &-next 
-      right: 233px
+      right: 15.53rem
       mask-image: url(../img/arrow-next.svg)
       background: $light
       
@@ -127,7 +127,7 @@
       flex-direction: column-reverse
     &__text
       margin-left: 0
-      max-width: 566px
+      max-width: 37.7rem
   .swiper
     &-container
       max-width: 100%
@@ -140,6 +140,7 @@
         background: none
         &::after
           display: block
+          opacity: 0.5
       &-prev
         left: 15px
         bottom: 50%

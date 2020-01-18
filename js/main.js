@@ -234,60 +234,90 @@ $(document).ready(function () {
   };
 
   var player;
-  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+  $('.advantage__play').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('advantage-player', {
       height: '267',
       width: '100%',
       videoId: 'bNU1DAD3q98',
       events: {
-        'onReady': videoPlay,
+        'onReady': videoPlayA,
       }
     });
+  })
+  function videoPlayA(event) {
+    event.target.playVideo();
+  };
+
+  var player;
+  $('.video__play-1').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('about-player-1', {
       height: '267',
       width: '100%',
       videoId: 'FKhIwkry - KA',
       events: {
-        'onReady': videoPlay,
-      }
-    });
-    player = new YT.Player('about-player-2', {
-      height: '267',
-      width: '100%',
-      videoId: 'FKhIwkry - KA',
-      events: {
-        'onReady': videoPlay,
-      }
-    });
-    player = new YT.Player('about-player-3', {
-      height: '267',
-      width: '100%',
-      videoId: 'FKhIwkry - KA',
-      events: {
-        'onReady': videoPlay,
-      }
-    });
-    player = new YT.Player('about-player-4', {
-      height: '267',
-      width: '100%',
-      videoId: 'FKhIwkry - KA',
-      events: {
-        'onReady': videoPlay,
-      }
-    });
-    player = new YT.Player('about-player-5', {
-      height: '267',
-      width: '100%',
-      videoId: 'FKhIwkry - KA',
-      events: {
-        'onReady': videoPlay,
+        'onReady': videoPlayB,
       }
     });
   })
-  function videoPlay(event) {
+  function videoPlayB(event) {
     event.target.playVideo();
   };
 
+  $('.video__play-2').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('about-player-2', {
+      height: '267',
+      width: '100%',
+      videoId: 'ACtD2W1ihWw',
+      events: {
+        'onReady': videoPlayC,
+      }
+    });
+  })
+  function videoPlayC(event) {
+    event.target.playVideo();
+  };
+
+  $('.video__play-3').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('about-player-3', {
+      height: '267',
+      width: '100%',
+      videoId: 'cB-K8BTcUKU',
+      events: {
+        'onReady': videoPlayD,
+      }
+    });
+  })
+  function videoPlayD(event) {
+    event.target.playVideo();
+  };
+
+  $('.video__play-4').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('about-player-4', {
+      height: '267',
+      width: '100%',
+      videoId: '0UhOaQ_lxl0',
+      events: {
+        'onReady': videoPlayE,
+      }
+    });
+  })
+  function videoPlayE(event) {
+    event.target.playVideo();
+  };
+
+  $('.video__play-5').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('about-player-5', {
+      height: '267',
+      width: '100%',
+      videoId: 'GVDJ8O3lPBA&t=506s',
+      events: {
+        'onReady': videoPlayF,
+      }
+    });
+  })
+  function videoPlayF(event) {
+    event.target.playVideo();
+  };
 
 
 })
