@@ -27,14 +27,15 @@
     margin: auto
     width: 42rem
     height: 28rem
-    background: url('../img/video-mask.jpg') no-repeat center
+    background: url('../img/video-mask.jpg') no-repeat center / cover
     margin-right: -0.2rem
 .video
   &__play
     position: relative
     margin: auto
     cursor: pointer
-
+    &:hover
+      box-shadow: 10px $light
 
 @media screen and ( max-width: 1659px )
   .advantage
@@ -56,6 +57,8 @@
         padding-left: 35rem
     &__content
       justify-content: center
+    &__video
+      margin: 0
 
 @media screen and ( max-width: 1199px )
   .advantage
@@ -68,7 +71,38 @@
     &__background
       &--second
         display: none
+  .video
+    &__play
+      max-width: 3rem
+      &:hover
+        display: none
 
 @media screen and ( max-width: 575px )
   .advantage
     height: auto
+    &__video
+      max-width: 100%
+      margin-bottom: 1.5rem
+  .video
+    &__play
+      max-width: 2rem
+
+@media screen and ( max-width: 475px )
+  .advantage
+    &__video
+      max-height: 23rem
+
+@media screen and ( max-width: 425px )
+  .advantage
+    &__video
+      max-height: 20rem
+
+@media screen and ( max-width: 375px )
+  .advantage
+    &__video
+      max-height: 18rem
+
+@media screen and ( max-width: 320px )
+  .advantage
+    &__video
+      max-height: 15rem
