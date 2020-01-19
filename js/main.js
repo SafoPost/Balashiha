@@ -16,17 +16,62 @@ $(document).ready(function () {
     send.removeClass('send--visible');
   });
 
-  /*document.on('click', function (event) {
-    if (event.target == modal) {
-      modal.removeClass('modal--visible');
-    }
+  var prodOne = $('.product-one');
+  var prodTwo = $('.product-two');
+  var prodThree = $('.product-three');
+  var prodFour = $('.product-four');
+  var prodFive = $('.product-five');
+  var prodSix = $('.product-six');
+  var oneBtn = $('[data-toggle=product-one]');
+  var twoBtn = $('[data-toggle=product-two]');
+  var threeBtn = $('[data-toggle=product-three]');
+  var fourBtn = $('[data-toggle=product-four]');
+  var fiveBtn = $('[data-toggle=product-five]');
+  var sixBtn = $('[data-toggle=product-six]');
+  var closeProdBtn = $('.product__back');
+
+  oneBtn.on('click', function () {
+    prodOne.toggleClass('product-one--visible');
+  });
+  closeProdBtn.on('click', function () {
+    prodOne.removeClass('product-one--visible');
   });
 
-  document.on('keydown', function (event) {
-    if (event.keyCode === 27) {
-      modal.removeClass('modal--visible');
-    }
-  });*/
+  twoBtn.on('click', function () {
+    prodTwo.toggleClass('product-two--visible');
+  });
+  closeProdBtn.on('click', function () {
+    prodTwo.removeClass('product-two--visible');
+  });
+
+  threeBtn.on('click', function () {
+    prodThree.toggleClass('product-three--visible');
+  });
+  closeProdBtn.on('click', function () {
+    prodThree.removeClass('product-three--visible');
+  });
+
+  fourBtn.on('click', function () {
+    prodFour.toggleClass('product-four--visible');
+  });
+  closeProdBtn.on('click', function () {
+    prodFour.removeClass('product-four--visible');
+  });
+
+  fiveBtn.on('click', function () {
+    prodFive.toggleClass('product-five--visible');
+  });
+  closeProdBtn.on('click', function () {
+    prodFive.removeClass('product-five--visible');
+  });
+
+  sixBtn.on('click', function () {
+    prodSix.toggleClass('product-six--visible');
+  });
+  closeProdBtn.on('click', function () {
+    prodSix.removeClass('product-six--visible');
+  });
+
 
   // Подключение swiper
   var mySwiper = new Swiper('.swiper-container', {
@@ -253,7 +298,7 @@ $(document).ready(function () {
     player = new YT.Player('about-player-1', {
       height: '267',
       width: '100%',
-      videoId: 'FKhIwkry - KA',
+      videoId: 'J5SaaPZVvGY',
       events: {
         'onReady': videoPlayB,
       }
@@ -309,7 +354,7 @@ $(document).ready(function () {
     player = new YT.Player('about-player-5', {
       height: '267',
       width: '100%',
-      videoId: 'GVDJ8O3lPBA&t=506s',
+      videoId: 'GVDJ8O3lPBA',
       events: {
         'onReady': videoPlayF,
       }
