@@ -1,3 +1,8 @@
+$result_html = preg_replace(
+  ['/ {2,}/', '/<!--.*?-->|\t|(?:\r?\n[ \t]*)+/s'],
+  [' ', ''],
+  $result_html
+);
 $(document).ready(function () {
   var modal = $('.modal');
   var modalBtn = $('[data-toggle=modal]');
@@ -293,7 +298,7 @@ $(document).ready(function () {
   YaMapsMinShown = false;
   $(window).scroll(function () {
     if (!YaMapsMinShown) {
-      if ($(window).scrollTop() + $(window).height() > $(document).height() - 500) {
+      if ($(window).scrollTop() + $(window).height() > $(document).height() - 800) {
         showYaMapsMin();
         YaMapsMinShown = true;
       }
@@ -306,6 +311,19 @@ $(document).ready(function () {
     document.getElementById("YaMapsMin").appendChild(script);
   };
 
+  var addmap = false;
+  $(window).scroll(function () {
+    var el = $('YaMapsMin')
+    if ($(this).scrollTop() > el.offset().top - 800) {
+      if (addmap) return;
+      addmap = true;
+      var script = document.createElement('script');
+      script.src = "https://api-maps.yandex.ru/2.1/?apikey=522725e7-5573-47cd-a7ff-730cc2cc1e63&lang=ru_RU&onload=init";
+      $('body').append(script);
+    };
+  });
+
+  // Плеер для advantage-section---------------------------------------
   var player;
   $('.advantage__play').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('advantage-player', {
@@ -321,6 +339,7 @@ $(document).ready(function () {
     event.target.playVideo();
   };
 
+  // Плееры для about-section----------------------------------------
   var player;
   $('.video__play-1').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('about-player-1', {
@@ -392,16 +411,18 @@ $(document).ready(function () {
     event.target.playVideo();
   };
 
-  var addmap = false;
-  $(window).scroll(function () {
-    var el = $('.map')
-    if ($(this).scrollTop() > el.offset().top - 800) {
-      if (addmap) return;
-      addmap = true;
-      var script = document.createElement('script');
-      script.src = "https://api-maps.yandex.ru/2.1/?apikey=522725e7-5573-47cd-a7ff-730cc2cc1e63&lang=ru_RU&onload=init";
-      $('body').append(script);
-    };
+  // Yandex.Metrika
+  (function (m, e, t, r, i, k, a) {
+    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+    m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+  })
+    (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+  ym(57091498, "init", {
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true,
+    webvisor: true
   });
 
 })

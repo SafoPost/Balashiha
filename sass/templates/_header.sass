@@ -1,5 +1,5 @@
 .header
-  background: #faeabc url('../img/bg-header.webp') no-repeat center / cover
+  background: #faeabc url('../img/bg-header.jpg') no-repeat center / cover
   width: 100%
   height: 5.3rem
   top: 0
@@ -119,13 +119,18 @@
   display: flex
   justify-content: space-between
 
-// @media screen and ( max-width: 1659px )
-//   .brand
-//     &__logo
-//       &__image
-//         width: 5.6rem
-//         height: 5.6rem
-//         margin: 0.6rem 0.8rem 1.06rem
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .brand
+    &__logo
+      &:before, &:after
+        display: none
+      &__image
+        mask-image: none
+        background: $light url('../img/logo2.png') no-repeat center / cover
+        width: 109px
+        height: 106px
+        margin: 0
+
 
 @media screen and ( max-width: 1199px )
   .brand

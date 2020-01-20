@@ -1,18 +1,26 @@
 @font-face {
-  font-family: 'Nokia Sans S60';
+  font-family: 'Neo Sans Pro Medium';
   src: 
-  url('../fonts/nokia/NokiaSansS60.woff2') format('woff2'),
-  url('../fonts/nokia/NokiaSansS60.woff') format('woff');
+  url('../fonts/neo/NeoSansPro-Medium.woff2') format('woff2'),
+  url('../fonts/neo/NeoSansPro-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Neo Sans Pro Medium';
+  font-family: 'Roboto';
   src: 
-  url('../fonts/neo/NeoSansPro-Medium.woff2') format('woff2'),
-  url('../fonts/neo/NeoSansPro-Medium.woff') format('woff');
+  url('../fonts/roboto/Roboto-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: 
+  url('../fonts/roboto/RobotoCondensed-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
