@@ -14,11 +14,10 @@
 </head>
 <body>
   <header class="header">
+    <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(57091498, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/57091498" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
     <div class="menu">
       <div class="brand">
         <a href="http://safo-post.ru/Balashiha/" class="brand__logo"></a>
-        <!-- <object type="image/svg+xml" data="img/logo.svg" class="brand__logo__image"></object> -->
-        <!-- <img src="img/logo.svg" alt="Logo" class="brand__logo__image"> -->
         <div class="brand__logo__image"></div>
         <a href="http://safo-post.ru/Balashiha/" class="brand__title">
           <strong class="brand__title--primary">Балашиха Хлеб</strong>
@@ -40,8 +39,8 @@
   <main class="main">
     <section class="hero" id="section-hero">
       <div class="hero__background">
-        <img src="img/bg-hero.jpg" alt="Хлеб" class="hero__background--primary">
-        <img src="img/bg-hero-2.jpg" alt="Пшеница" class="hero__background--secondary">
+        <img src="img/bg-hero.webp" alt="Хлеб" class="hero__background--primary">
+        <img src="img/bg-hero-2.webp" alt="Пшеница" class="hero__background--secondary">
       </div>
       <div class="container">
         <h1 class="hero__title"><strong class="hero__title--primary">Уникальные коммерческие условия</strong><br>по поставкам хлебобулочных и кандитерских изделей от крупнейшего хлебзавода в МО</h1>
@@ -53,7 +52,7 @@
           </div>
           <div class="hero__wrap">
             <h3 class="hero__wrap__title"> <span class="hero__wrap__title--primary">Получите персональное</span><br>коммерческое предложение</h3>
-            <form action="send.php" method="POST" id="hero-form" class="form hero__form">
+            <form action="send.php" method="POST" id="hero-form" class="form hero__form" onsubmit="ym(57091498, 'reachGoal', 'form'); return true;">
               <input type="text" name="userName" class="form__input form__input--name hero__form__input" id="hero-form-name" placeholder="Ваше имя">
               <input type="email" name="userEmail" class="form__input form__input--email hero__form__input" id="hero-form-email" placeholder="Ваш e-mail">
               <input type="tel" name="userPhone" class="form__input form__input--tel hero__form__input" id="hero-form-phone" placeholder="Ваш номер телефона">
@@ -69,9 +68,9 @@
     <!-- /.hero -->
     <section class="photo">
       <div class="photo__background">
-        <img src="img/bg-photo-1.png" alt="Зёрна" class="photo__background--first-desktop">
-        <img src="img/bg-photo-1-min.png" alt="Зёрна" class="photo__background--first-mobile">
-        <img src="img/bg-photo-2.png" alt="Зёрна" class="photo__background--second">
+        <img src="img/bg-photo-1.jpg" alt="Зёрна" class="photo__background--first-desktop">
+        <img src="img/bg-photo-1-min.jpg" alt="Зёрна" class="photo__background--first-mobile">
+        <img src="img/bg-photo-2.jpg" alt="Зёрна" class="photo__background--second">
       </div>
       <div class="container">
         <h2 class="section__title">фотографии нашего завода</h2>
@@ -259,7 +258,7 @@
     </section>
     <!-- /.catalog -->
     <section class="about">
-      <div class="about__background"><img src="img/bg-about.png" alt="Зёрна" class="about__background__image"></div>
+      <div class="about__background"><img src="img/bg-about.jpg" alt="Зёрна" class="about__background__image"></div>
       <div class="container">
         <h2 class="section__title">О "Балашиха Хлеб"</h2>
         <div class="about__content">
@@ -324,7 +323,7 @@
     <div class="container">
       <h2 class="section__title section__title--light">Получите персональное предложение</h2>
       <div class="offer__content">
-        <form action="send.php" method="POST" id="offer-form" class="form offer__form">
+        <form action="send.php" method="POST" id="offer-form" class="form offer__form"  onsubmit="ym(57091498, 'reachGoal', 'form'); return true;">
           <div class="form offer__form">
             <div class="offer__form__group">
               <input type="text" name="userName" class="form__input form__input--name offer__form__input" id="offer-form-name" placeholder="Ваше имя">
@@ -390,7 +389,6 @@
       <img src="img/galery/bread-8-color.jpg" alt="" class="galery__image--color">
       <img src="img/galery/bread-12-gray.jpg" alt="" class="galery__image--gray">
     </div>
-
   </div>
   <!-- /.galery -->
   <footer class="footer">
@@ -416,7 +414,7 @@
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и&nbsp;мы&nbsp;вам&nbsp;перезвоним</h3>
-      <form action="send.php" method="POST" id="modal-form" class="form modal__form">
+      <form action="send.php" method="POST" id="modal-form" class="form modal__form"  onsubmit="ym(57091498, 'reachGoal', 'form'); return true;">
         <input type="text" name="userName" class="form__input form__input--name modal__form__input" id="modal-user-name" placeholder="Ваше имя">
         <input type="tel" name="userPhone" class="form__input form__input--tel modal__form__input" id="modal-user-phone" placeholder="Ваш номер телефона">
         <button type="submit" class="form__button modal__form__button" data-toggle="modal-send">Получить КП!</button>
@@ -535,6 +533,8 @@
     </div>
   </div>
   <!-- /.product-six -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=670d4082-a239-4ba9-94da-fadb0a659c28&lang=ru_RU"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/src/core.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>

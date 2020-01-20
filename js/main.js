@@ -102,7 +102,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 10
+        minlength: 12
       },
       userEmail: {
         required: true,
@@ -118,7 +118,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: "Назовите свой телефон",
-        minlength: "Номер должен быть из 10 цифр"
+        minlength: "Номер должен быть из 12 цифр"
       },
       userEmail: {
         required: "Укажите свой Email",
@@ -155,7 +155,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 10
+        minlength: 12
       },
       userEmail: {
         required: true,
@@ -171,7 +171,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: "Назовите свой телефон",
-        minlength: "Номер должен быть из 10 цифр"
+        minlength: "Номер должен быть из 12 цифр"
       },
       userEmail: {
         required: "Укажите свой Email",
@@ -208,7 +208,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 10
+        minlength: 12
       }
     },
     // Сообщения .modal__form
@@ -243,25 +243,54 @@ $(document).ready(function () {
     }
   });
 
-  YaMapsShown = false;
+  // YaMapsShown = false;
+  // $(window).scroll(function () {
+  //   if (!YaMapsShown) {
+  //     if ($(window).scrollTop() + $(window).height() > $(document).height() - 700) {
+  //       showYaMaps();
+  //       YaMapsShown = true;
+  //     }
+  //   }
+  // });
+  // function showYaMaps() {
+  //   var script = document.createElement("script");
+  //   script.type = "text/javascript";
+  //   script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ce79f0f7e8e05dd84bab98d41ac9ee829dc4f5b8db0a7175aa19b793182aeec&amp;width=100%25&amp;height=563&amp;lang=ru_RU&amp;scroll=false";
+  //   document.getElementById("YaMaps").appendChild(script);
+  // };
+
+  // Карта с меткой для desktop
+  ymaps.ready(init);
+
+  function init() {
+    var myMap;
+    setTimeout(function () {
+
+      myMap = new ymaps.Map('YaMaps', {
+        center: [55.738024, 37.510322],
+        zoom: 17,
+
+      });
+      var placemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Наша пекарня',
+        // Зададим содержимое основной части балуна.
+        balloonContentBody: '<div class="balloon"><img src="../img/balloon_img.jpg" class="balloon__img"><div class="balloon--right"><h4 class="balloon__header">Мы находимся:</h4><span class="balloon__text">г. Москва, ул. Неверовского, д. 9<br>Телефон: </span> <a href="tel:+7-495-495-44-44" class="balloon__phone">+7 (495) 444-44-44<br></a><span class="balloon__footer">E-mail:<a href="mailto:info@ied.ru" class="balloon__email"> info@ied.ru</a></span></div></div>',
+      });
+      // Добавим метку на карту.
+      myMap.geoObjects.add(placemark);
+      // Откроем балун на метке.
+      placemark.balloon.open();
+
+      myMap.geoObjects
+        .add(placemark);
+      myMap.behaviors.disable('scrollZoom');
+
+
+    }, 6000);
+  }
+
+  // Карта для mobile
   YaMapsMinShown = false;
-
-  $(window).scroll(function () {
-    if (!YaMapsShown) {
-      if ($(window).scrollTop() + $(window).height() > $(document).height() - 700) {
-        showYaMaps();
-        YaMapsShown = true;
-      }
-    }
-  });
-
-  function showYaMaps() {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ce79f0f7e8e05dd84bab98d41ac9ee829dc4f5b8db0a7175aa19b793182aeec&amp;width=100%25&amp;height=563&amp;lang=ru_RU&amp;scroll=false";
-    document.getElementById("YaMaps").appendChild(script);
-  };
-
   $(window).scroll(function () {
     if (!YaMapsMinShown) {
       if ($(window).scrollTop() + $(window).height() > $(document).height() - 500) {
@@ -270,7 +299,6 @@ $(document).ready(function () {
       }
     }
   });
-
   function showYaMapsMin() {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -364,5 +392,16 @@ $(document).ready(function () {
     event.target.playVideo();
   };
 
+  var addmap = false;
+  $(window).scroll(function () {
+    var el = $('.map')
+    if ($(this).scrollTop() > el.offset().top - 800) {
+      if (addmap) return;
+      addmap = true;
+      var script = document.createElement('script');
+      script.src = "https://api-maps.yandex.ru/2.1/?apikey=522725e7-5573-47cd-a7ff-730cc2cc1e63&lang=ru_RU&onload=init";
+      $('body').append(script);
+    };
+  });
 
 })
